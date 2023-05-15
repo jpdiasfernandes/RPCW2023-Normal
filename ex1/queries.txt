@@ -1,0 +1,5 @@
+1 - db.contracts.count() = 17943
+2-  db.contracts.find({InstituicaoEnsino: "Universidade do Minho"}).count() = 1399
+3- db.contracts.distinct("AreaCNAEF").sort()
+4 - db.contracts.aggregate([ { $group: { _id: { $year: "$DataInicioContrato" }, sum: { $sum: 1 } } }])
+5 - db.contracts.aggregate([ { $group: { _id: "$NIPCInstituicao", sum: { $sum: 1 } } }])

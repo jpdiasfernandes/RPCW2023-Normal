@@ -1,0 +1,30 @@
+extends layout
+
+block content
+    .w3-card-4
+        header.w3-container.w3-teal
+            h1 Instituição: #{nome}
+        .w3-container
+            ul.w3-ul
+                li #[b NIPC:] #{nipc}
+                li #[b Nome:] #{nome}
+                li
+                    table.w3-table-all
+                        tr
+                            th Id
+                            th DataInicioContrato
+                            th DataFimContrato
+                            th NomeInstituicao
+                            th AreasInvestigacao
+                        each contrato in contratos
+                            tr
+                                td
+                                    a(href='/' + contrato._id) #{contrato._id}
+                                td=contrato.DataInicioContrato
+                                td=contrato.DataFimContrato
+                                td
+                                    a(href='/inst/' + contrato.NIPCInstituicao) #{contrato.NomeInstituicao}
+                                td=contrato.AreasInvestigacao
+        footer.w3-container.w3-teal
+            h5 Generated for RPCW2023-Normal in #{d}
+            a(href="/") Página inicial

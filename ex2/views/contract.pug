@@ -1,0 +1,65 @@
+extends layout
+
+block content
+    .w3-card-4
+        header.w3-container.w3-teal
+            h1 Contrato No #{contrato._id}
+        .w3-container
+            ul.w3-ul
+                li #[b Id:] #{contrato._id}
+                if contrato.NomeInstituicao
+                    li #[b Nome da Instituição:] #{contrato.NomeInstituicao}
+                if contrato.NIPCInstituicao
+                    li #[b NIPC da Instituição:] #{contrato.NIPCInstituicao}
+                if contrato.NomeTitularContrato
+                    li #[b Nome do Titular do Contrato:] #{contrato.NomeTitularContrato}
+                if contrato.CienciaID
+                    li #[b Ciência ID:] #{contrato.CienciaID}
+                if contrato.ORCID
+                    li #[b ORCID:] #{contrato.ORCID}
+                if contrato.CienciaVitae
+                    li #[b Ciência Vitae:] #{contrato.CienciaVitae}
+                if contrato.Carreira_RPN
+                    li #[b Carreira RPN:] #{contrato.Carreira_RPN}
+                if contrato.Categoria_RPN
+                    li #[b Categoria RPN:] #{contrato.Categoria_RPN}
+                if contrato.Vinculo_RPN
+                    li #[b Vinculo RPN:] #{contrato.Vinculo_RPN}
+                if contrato.RegimePrestacaoServico
+                    li #[b Regime de Prestação de Serviço:] #{contrato.RegimePrestacaoServico}
+                if contrato.DataInicioContrato
+                    li #[b Data de Início do Contrato:] #{contrato.DataInicioContrato}
+                if contrato.DataFimContrato
+                    li #[b Data de Fim do Contrato:] #{contrato.DataFimContrato}
+                if contrato.ETIremunerado
+                    li #[b ETI Remunerado:] #{contrato.ETIremunerado}
+                if contrato.ProcedimentoVinculacao
+                    li #[b Procedimento de Vinculação:] #{contrato.ProcedimentoVinculacao}
+                if contrato.AreasInvestigacao
+                    li #[b Áreas de Investigação:] #{contrato.AreasInvestigacao}
+                if contrato.NivelFormação
+                    li #[b Nível de Formação:] #{contrato.NivelFormação}
+                if contrato.InstituicaoEnsino
+                    li #[b Instituição de Ensino:] #{contrato.InstituicaoEnsino}
+                if contrato.PaisInstituição
+                    li #[b País da Instituição de Ensino:] #{contrato.PaisInstituiçãoEnsino}
+                if contrato.AnoDiploma
+                    li #[b Ano do Diploma:] #{contrato.AnoDiploma}
+                if contrato.Curso
+                    li #[b Curso:] #{contrato.Cursos}
+                if contrato.AreaCNAEF
+                    li #[b Área CNAEF:] #{contrato.AreaCNAEF}
+                if contrato.AreaFORD
+                    li #[b Área FORD:] #{contrato.AreaFORD}
+                if contrato.ProvasAgregacao
+                    li #[b Provas de Agregação:] #{contrato.ProvasAgregacao}
+                if contrato.TituloEspecialista
+                    li #[b Título de Especialista:] #{contrato.TituloEspecialista}
+                if contrato.ProvasCoordenacao
+                    li #[b Provas de Coordenação:] #{contrato.ProvasCoordenacao}
+                if contrato.ProvasAptidao
+                    li #[b Provas de Aptidão:] #{contrato.ProvasAptidao}
+
+        footer.w3-container.w3-teal
+            h5 Generated for RPCW2023-Normal in #{d}
+            a(href="/") Página inicial
