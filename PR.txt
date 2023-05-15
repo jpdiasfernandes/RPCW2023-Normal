@@ -1,0 +1,34 @@
+A persintência de dados fez-se com o MongoDB, tendo sido criado um Schema para os contratos
+
+A schema garantia que os tipos de dados com o formato "YYYY-MM-DD" eram guardados como Date, uma vez que este tipos de
+daos iria ser muito importante para queries futuras.
+
+As queries feitas para o ex1 estão guardadas no ficheiro queries.txt dentro da pasta ex1.
+
+No entanto, por forma a converter as datas "DD/MM/YYYY" para "YYYY-MM-DD" foi criado um script em python que fez a conversão, que utiliza o modulo re de expressões regulares.
+
+De forma que a string fosse convertida de Stringn para Date utilizou-se o mongoose e fez-se um insertMany como é possível
+no código comentado na app.js na pasta ex1. Esta inserção só foi feita uma vez, não sempre que se iniciava o servidor.
+
+O início do servidor da API é feito com npm start na pasta ex1, que vai iniciar um servidor na porta 15015
+
+Os pedidos feitos para o ex1 são respondidos como json.
+
+No ex2 foram feitos pedidos ao servidor mencionado anteriormente, tendo como recurso o axios.
+
+Para executar o servidor da interface gráfica apenas é necessário correr npm start na pasta ex2.
+
+Este comando vai iniciar um servidor na porta 15016 que responde com código html para poder ser visto em browsers.
+
+
+
+
+
+
+
+
+
+
+
+
+
